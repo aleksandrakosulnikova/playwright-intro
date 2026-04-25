@@ -15,7 +15,7 @@ test('Basic button test', async ({ page }) => {
     await expect(btn).toBeDisabled();
     await username.fill('user1');
     await email.fill('test@test.test');
-    await expect(btn).toBeEnabled();
+    await expect(btn).toBeEnabled;
     await btn.click();
     await expect(popup).toBeVisible();
     await expect(popup).toHaveText('OK');

@@ -18,3 +18,28 @@ test('get started link', async ({ page }) => {
   const heading = page.getByRole('heading', { name: 'Installation' })
   await expect(heading).toBeVisible();
 });
+
+//Домашка №15
+
+test("Has GitHub button", async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+
+  const linkGitHub = page.getByRole("link", { name: "GitHub repository"});
+  await expect(linkGitHub).toBeVisible();
+});
+
+
+test("Has Discord button", async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+
+  const linkDiscord = page.getByRole("link", { name: "Discord server"});
+  await expect(linkDiscord).toBeVisible();
+});
+
+
+test("Has Dark Mode switcher button", async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+
+  const buttonDarkModeSwitcher = page.getByRole("button", { name: "Switch between dark and light mode (currently system mode)"});
+  await expect(buttonDarkModeSwitcher).toBeVisible();
+});
