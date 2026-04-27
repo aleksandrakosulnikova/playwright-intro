@@ -2,9 +2,9 @@ import { test, expect } from '@playwright/test';
 import { faker } from "@faker-js/faker"
 
 //const TD_URL = 'https://fe-delivery.tallinn-learning.ee';
-const APP_URL = process.env.APP_URL;
-const APP_USER  = process.env.APP_USER;
-const APP_PASSWORD = process.env.APP_PASSWORD;
+const APP_URL = process.env.APP_URL || "missing APP_URL env var";
+const APP_USER  = process.env.APP_USER || "missing APP_USER env var";
+const APP_PASSWORD = process.env.APP_PASSWORD || "missing APP_PASSWORD env var";
 
 
 test.beforeEach(async ({ page }) => {
